@@ -1,0 +1,41 @@
+{
+  "name": "color-game",
+  "version": "1.0.0",
+  "description": "3D Color Game",
+  "main": "main.js",
+  "author": {
+    "name": "zorncbllr",
+    "email": "caballeromanuel203@gmail.com"
+  },
+  "homepage": "https://github.com/zorncbllr/color-game",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:linux": "electron-builder --linux",
+    "build:win": "electron-builder --win",
+    "build:all": "electron-builder --linux --win"
+  },
+  "build": {
+    "appId": "com.colorcubegame.app",
+    "productName": "Color Cube Game",
+    "files": [
+      "**/*",
+      "node_modules/three/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "category": "Game"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
