@@ -16,11 +16,10 @@
     "build:all": "electron-builder --linux --win"
   },
   "build": {
-    "appId": "com.colorcubegame.app",
-    "productName": "Color Cube Game",
+    "appId": "com.colorgame.app",
+    "productName": "Color Game",
     "files": [
-      "**/*",
-      "node_modules/three/**/*"
+      "**/*"
     ],
     "linux": {
       "target": [
